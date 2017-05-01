@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">课程管理</string>
+    <string name="app_intro">管理日常课程的简单app</string>
+    <string name="drawer_about">关于</string>
+    <string name="drawer_setting">设置</string>
+    <string name="drawer_group_options">选项</string>
+    <string name="drawer_group_pages">页面</string>
+    <string name="index">首页</string>
+    <string name="drawer_open">打开</string>
+    <string name="drawer_close">关闭</string>
+    <string name="action_search">搜索</string>
+    <string name="setting_normal">常规</string>
+    <string name="setting_night">夜间模式</string>
+    <string name="setting_voice">一键静音</string>
+    <string name="about_author">作者:\t\t(赵思敏)</string>
+    <string name="about_info">课程管理\t\t\tV1.0.0</string>
+
+</resources>

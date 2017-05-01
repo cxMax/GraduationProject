@@ -1,0 +1,55 @@
+
+def checkBuildVersion = { String versionName , int versionCode ->
+    String vn = versionName;
+    int vc = versionCode
+
+    String erroeMsg = "The format of VersionName $vn is not supported!"
+    List<String> verList = vn.tokenize('.')
+    try {
+        if (verList?.size() == 3) {
+            int verA = verList.get(0).toInteger()
+            int verB = verList.get(1).toInteger()
+            int verC = verList.get(2).split('-', 2)[0].toInteger();
+            int versionCodeShouldBe = verA * 1000000 + verB * 1000 + verC
+            if (versionCodeShouldBe == vc) {
+                return;
+            } else {
+                errorMsg = "The relative version code of $vn(VERSION_NAME) should be $versionCodeShouldBe, not $vc(VERSION_CODE)" +
+                        "\n verA: $verA, verB: $verB, verC: $verC, verList: ${verList*.toString()}"
+            }
+        }
+    } catch (Exception e) {
+        e.printStackTrace()
+    }
+    throw new GradleException(errorMsg)
+}
+
+
+def checkBuildVersionForAndroid = { android
+    println "Checking android.defaultConfig.versionName and versionCode..."
+    String errMsg = "parameter is null, android is required"
+    if (android) {
+        if (rootProject.ext.android..versionName && rootProject.ext.android.versionCode) {
+            checkVersion(rootProject.ext.android..versionName, rootProject.ext.android.versionCode)
+            return
+        } else {
+            errMsg = "android.defaultConfig.versionName or android.defaultConfig.versionCode is null!"
+        }
+    }
+
+    throw new GradleException(errMsg)
+}
+
+def checkBuildVersionForProject = {
+    println "Now Check VersionName and VersionCode declared in common.gradle"
+    int vc = java.lang.Integer.parseInt(rootProject.ext.android.versionCode)
+    String vn = rootProject.ext.android..versionName
+    checkVersion(vn , vc)
+}
+
+
+ext {
+    checkVersionForAndroid = checkBuildVersionForAndroid
+    checkVersionForProject = checkBuildVersionForProject
+    checkVersion = checkBuildVersion
+}

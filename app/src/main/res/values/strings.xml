@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Curriculum Management</string>
+    <string name="app_intro">this is a simple app to manage daily curriculum</string>
+    <string name="drawer_about">about</string>
+    <string name="drawer_setting">setting</string>
+    <string name="drawer_group_options">options</string>
+    <string name="drawer_group_pages">pages</string>
+    <string name="index">index</string>
+    <string name="drawer_open">open</string>
+    <string name="drawer_close">close</string>
+    <string name="action_search">search</string>
+    <string name="setting_normal">normal setting</string>
+    <string name="setting_night">night mode</string>
+    <string name="setting_voice">night mode</string>
+    <string name="about_author">author:\t\t(zsm)</string>
+    <string name="about_info">Curriculum Management\t\t\tV1.0.0</string>
+</resources>
