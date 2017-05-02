@@ -5,22 +5,21 @@
 课程管理App , 基于android平台.
 
 ## functions
-功能模块
+功能模块 : 
+* Course Component 对课程增删改查
 
-### Course Component
-对课程增删改查
+* Remind Component 课程到点提醒功能
 
-### Remind Component
-课程到点提醒功能
+* Mute Mode Component 一键静音
 
-### Mute Mode Component
-一键静音
+* Alarm Component 闹钟提醒
 
-### Refresh and LoadMore Component
-下拉刷新 与 加载更多 模块
+* Refresh and LoadMore Component 下拉刷新 与 加载更多 模块
 
-### Login Component (todo)
-登录模块
+* Login Component (todo) 登录模块
+
+## 部分截图
+  ![image](https://github.com/cxMax/GraduationProject/blob/master/screenshot/S70501-230817.jpg)
 
 ## License
    Copyright (C) 2017 cxMax  
