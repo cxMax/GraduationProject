@@ -4,7 +4,7 @@
 ## introduce 
 * 课程管理App , 基于android平台 , 包含一些简单的功能 , 参见functions
 * rxjava + dagger2 + butterknife + MVP + 自己封装的一些lib(参见component package)
-* 但app还存在一些问题,例如性能和代码 , 我另开了一个project : <a herf="https://github.com/cxMax/Android-Clean-Architecture">Android-Clean-Architecture</a>利用自己在工作中积累的经验做优化.例如解决冷启动\内存\泄漏\GPU等问题.因此就没有在这个project继续修改了
+* 但app还存在一些问题,例如性能和代码 , 我另开了一个project : [Android-Clean-Architecture](https://github.com/cxMax/Android-Clean-Architecture)利用自己在工作中积累的经验做优化.例如解决冷启动\内存\泄漏\GPU等问题.因此就没有在这个project继续修改了
 
 ## functions
 功能模块 : 
