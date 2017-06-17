@@ -22,6 +22,12 @@
         <activity android:name=".ui.calendar.activity.CalendarActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
+
+        <receiver android:name=".model.broadcast.AlarmReceiver">
+            <intent-filter>
+                <action android:name="action_alarm_manager" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

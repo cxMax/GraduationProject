@@ -1,9 +1,13 @@
 package com.cxmax.graduationproject.ui.calendar.activity;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.Toolbar;
 
 import com.cxmax.graduationproject.R;
+import com.cxmax.graduationproject.app.Constants;
 import com.cxmax.graduationproject.base.SimpleActivity;
 import com.cxmax.graduationproject.component.RxBus.RxBus;
 import com.prolificinteractive.materialcalendarview.CalendarDay;
@@ -58,7 +62,17 @@ public class CalendarActivity extends SimpleActivity {
 
     @OnClick(R.id.tv_calender_enter)
     void chooseDate() {
+        setAlarm();
         RxBus.getDefault().post(selectDate);
         finish();
+    }
+
+    private void setAlarm() {
+        Intent intent = new Intent(Constants.ACTION_ALARM_MANAGER);
+        PendingIntent sender = PendingIntent.getBroadcast(context,
+                1, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        intent.putExtra("msg","该上课了");
+        AlarmManager am = (AlarmManager) getSystemService(ALARM_SERVICE);
+        am.set(AlarmManager.RTC_WAKEUP, selectDate.getDate().getTime(), sender);
     }
 }

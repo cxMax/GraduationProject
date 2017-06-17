@@ -20,7 +20,7 @@ public class Course extends RealmObject{
 
     private String name;
 
-    private String user = "zsm";
+    private String user = "caixi";
 
     private long date;
 

@@ -20,4 +20,7 @@ public class Constants {
 
     //================= PREFERENCE ====================
     public static final String SP_NIGHT_MODE = "night_mode";
+
+    //================= ACTION ====================
+    public static final String ACTION_ALARM_MANAGER = "action_alarm_manager";
 }
