@@ -19,7 +19,7 @@
 * Login Component (todo) 登录模块
 
 ## 部分截图
-  ![image](https://github.com/cxMax/GraduationProject/blob/master/screenshot/S70501-230817.jpg)
+  ![image](https://github.com/cxMax/GraduationProject/blob/master/screenshot/index_page.jpg)
 
 ## License
    Copyright (C) 2017 cxMax  
